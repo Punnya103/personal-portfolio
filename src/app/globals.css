@@ -211,21 +211,18 @@
   .text-gradient {
     @apply bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text;
   }
-}
 
-.glass-card {
-  width: 240px;
-  height: 360px;
-  background: rgba(255, 255, 255, 0.07);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  .glass-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 
     0 8px 32px rgba(0, 0, 0, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.5),
     inset 0 -1px 0 rgba(255, 255, 255, 0.1),
-    inset 0 0 2px 1px rgba(255, 255, 255, 0.1);
+    inset 0 0 12px 6px rgba(255, 255, 255, 0.6);
   position: relative;
   overflow: hidden;
 }
@@ -237,12 +234,7 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.8),
-    transparent
-  );
+
 }
 
 .glass-card::after {
@@ -258,4 +250,24 @@
     transparent,
     rgba(255, 255, 255, 0.3)
   );
+}
+
+
+
+
+}
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-border {
+  animation: borderMove 4s linear infinite;
 }

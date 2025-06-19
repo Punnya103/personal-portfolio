@@ -19,7 +19,7 @@ const KeyboardKey: React.FC<KeyboardKeyProps> = ({ children, isActive, className
       transition={{ duration: 0.3 }}
       className={`
         inline-flex items-center justify-center
-        min-w-[45px] h-[45px]
+        min-w-[15px] h-[30px]
         px-3 py-1
         text-base font-semibold
         border border-gray-300 dark:border-gray-600
