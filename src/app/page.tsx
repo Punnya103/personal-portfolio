@@ -1,6 +1,7 @@
 import HeroPage from "./hero/page";
 import Aboutpage from "./about/page";
-import { Feature108Demo } from "./projects/page";
+import CarrerPage from "./career/page";
+
 
 
 export default function HomePage() {
@@ -14,7 +15,7 @@ export default function HomePage() {
         <Aboutpage />
       </section>
        <section data-theme-section="dark" className="min-h-screen bg-black text-white">
-       <Feature108Demo/>
+       <CarrerPage/>
       </section>
     </main>
   );

@@ -39,24 +39,25 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 backdrop-blur-md px-4 ${
+      className={`fixed top-0 left-0  z-50 transition-colors duration-300 backdrop-blur-md w-full  ${
         theme === 'light' ? 'text-black' : 'text-white'
       }`}
     >
-      <div className="flex items-center justify-between py-4 max-w-7xl mx-auto">
+      <div className="flex items-center justify-between px-12 md:justify-around py-4 ">
+        
         <h1 className="text-xl font-bold">my Portfolio</h1>
 
 
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex gap-5">
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href}>
               {link.label}
-            </Link>
+            </Link>   
           ))}
         </div>
 
     
-        <div className="md:hidden">
+        <div className="md:hidden ">
           <button onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>

@@ -185,7 +185,7 @@
 }
 
    .primary-gradient-line {
-    @apply w-1 sm:h-80 h-40 bg-gradient-to-b from-[#727272] to-transparent;
+    @apply w-1 sm:h-80 h-40 bg-gradient-to-b from-[#e2e2e2] to-transparent;
   }
   /* Shared wrapper for sections */
   .section-wrapper {
@@ -199,7 +199,7 @@
 
   /* Hero & other main headings */
   .section-heading {
-    @apply text-3xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight;
+    @apply text-2xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight;
   }
 
   /* Subheading / paragraph styling */
@@ -211,4 +211,51 @@
   .text-gradient {
     @apply bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text;
   }
+}
+
+.glass-card {
+  width: 240px;
+  height: 360px;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 2px 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+}
+
+.glass-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8),
+    transparent,
+    rgba(255, 255, 255, 0.3)
+  );
 }
