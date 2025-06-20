@@ -36,7 +36,7 @@ const CareerPage = () => {
   if (isMobile) {
     return (
       <section className="w-full min-h-screen px-4 py-10 text-white bg-[#0f0f1a]">
-        <h2 className="text-2xl font-bold mb-6 text-center">Career Highlights</h2>
+        {/* <h2 className="text-2xl font-bold mb-6 text-center">Career Highlights</h2> */}
         <div className="flex flex-col gap-6">
           {experiences.map((exp, idx) => (
             <CareerCard key={idx} {...exp} />
